@@ -12,24 +12,26 @@
 - **Content-Type**: `application/json`
 
 ### 请求报文格式
+
+- **custname**: 姓名明文
 - **stuempno**: 学工号明文
 - **pwd**: 密码密文(AES)
 
-## 加密规格说明
+### 加密规格说明
 
 - **算法**: AES ECB
 - **静态加密密钥**: `IhaIWKKs9AJpn5ip`
 - **Padding**: PKCS7
 - **Output**: Base64
 
-## 令牌管理
+### 令牌管理
 
 - **字段**: `accessToken`
 - **有效期**: 7200 s
 - **Header键**: `sw-authorization`
 - **Header值**: `Bearer "<accessToken>"`
 
-## 请求示例
+### 请求示例
 
 ```bash
 curl -X POST "http://10.10.10.147/openservice/epeortalAuth/login" \
@@ -42,7 +44,7 @@ curl -X POST "http://10.10.10.147/openservice/epeortalAuth/login" \
          }'
 ```
 
-## 登录成功返回结构体
+### 登录成功返回结构体
 
 ```json
 {
@@ -65,7 +67,7 @@ curl -X POST "http://10.10.10.147/openservice/epeortalAuth/login" \
 - 请求方法: `POST`
 - 优势: 无需处理 AES 密钥及加密过程，直接利用现有签名。
 
-## 请求报文格式
+### 请求报文格式
 
 ```json
 {
@@ -76,7 +78,7 @@ curl -X POST "http://10.10.10.147/openservice/epeortalAuth/login" \
 }
 ```
 
-## 登录成功返回结构体
+### 登录成功返回结构体
 
 同前一个方法的返回结构体。
 
