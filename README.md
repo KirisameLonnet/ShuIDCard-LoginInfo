@@ -1,7 +1,6 @@
 # ShuIDCard-LoginInfo
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python version](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
 
 本仓库旨在研究与记录上海大学校园卡系统的登录认证机制，包括 SM4 加密逻辑及 HMAC 签名登录方式。
 
